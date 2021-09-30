@@ -1,0 +1,171 @@
+.navbar-left {
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    display: none;
+    height: 100%;
+    transition: display .5s;
+    z-index: 9999999;
+}
+
+.content-nav-menu {
+    position: relative;
+    left: -50%;
+}
+
+.navbar-left.active {
+    -webkit-animation: fadein .5s linear forwards; 
+       -moz-animation: fadein .5s linear forwards; 
+        -ms-animation: fadein .5s linear forwards; 
+         -o-animation: fadein .5s linear forwards; 
+            animation: fadein .5s linear forwards;
+}
+
+.navbar-left.active #content-nav-menu{
+    -webkit-animation: entera .3s linear forwards; 
+       -moz-animation: entera .3s linear forwards; 
+        -ms-animation: entera .3s linear forwards; 
+         -o-animation: entera .3s linear forwards; 
+            animation: entera .3s linear forwards;
+}
+
+
+.navbar-left.dismiss {
+    -webkit-animation: fadeout .5s linear forwards; 
+       -moz-animation: fadeout .5s linear forwards; 
+        -ms-animation: fadeout .5s linear forwards; 
+         -o-animation: fadeout .5s linear forwards; 
+            animation: fadeout .5s linear forwards;
+}
+
+.navbar-left.dismiss #content-nav-menu{
+    -webkit-animation: outa .3s linear forwards; 
+       -moz-animation: outa .3s linear forwards; 
+        -ms-animation: outa .3s linear forwards; 
+         -o-animation: outa .3s linear forwards; 
+            animation: outa .3s linear forwards;
+}
+
+
+@keyframes entera {
+    from {  left: -50%; }
+    to   {  left: 0%; }
+}
+
+@-moz-keyframes entera {
+    from {  left: -50%; }
+    to   {  left: 0%; }
+}
+
+@-webkit-keyframes entera {
+    from {  left: -50%; }
+    to   {  left: 0%; }
+}
+
+@-ms-keyframes entera {
+    from {  left: -50%; }
+    to   {  left: 0%; }
+}
+
+
+@keyframes outa {
+    from {  left: 0%; }
+    to   {  left: -80%; }
+}
+
+@-moz-keyframes outa {
+    from {  left: 0%; }
+    to   {  left: -80%; }
+}
+
+@-webkit-keyframes outa {
+    from {  left: 0%; }
+    to   {  left: -80%; }
+}
+
+@-ms-keyframes outa {
+    from {  left: 0%; }
+    to   {  left: -80%; }
+}
+
+
+@keyframes fadein {
+    from {  background-color: rgba(0, 0, 0, 0); }
+    to   {  background-color: rgba(0, 0, 0, 0.5); }
+}
+
+@-moz-keyframes fadein {
+    from {  background-color: rgba(0, 0, 0, 0); }
+    to   {  background-color: rgba(0, 0, 0, 0.5); }
+}
+
+@-webkit-keyframes fadein {
+    from {  background-color: rgba(0, 0, 0, 0); }
+    to   {  background-color: rgba(0, 0, 0, 0.5); }
+}
+
+@-ms-keyframes fadein {
+    from {  background-color: rgba(0, 0, 0, 0); }
+    to   {  background-color: rgba(0, 0, 0, 0.5); }
+}
+
+
+
+@keyframes fadeout {
+    from {  background-color: rgba(0, 0, 0, 0.5); }
+    to   {  background-color: rgba(0, 0, 0, 0); }
+}
+
+@-moz-keyframes fadeout {
+    from {  background-color: rgba(0, 0, 0, 0.5); }
+    to   {  background-color: rgba(0, 0, 0, 0); }
+}
+
+@-webkit-keyframes fadeout {
+    from {  background-color: rgba(0, 0, 0, 0.5); }
+    to   {  background-color: rgba(0, 0, 0, 0); }
+}
+
+@-ms-keyframes fadeout {
+    from {  background-color: rgba(0, 0, 0, 0.5); }
+    to   {  background-color: rgba(0, 0, 0, 0); }
+}
+
+
+#close-nav-menu {height: 100%;}
+
+.closebtn {
+    position: relative;
+    top: 0;
+    right: -90%;
+}
+
+.content-nav-menu {
+    background-color: white;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration:none;
+}
+
+.nav-list a li{
+    width: 100%;
+}
+
+.content-nav-menu a  {
+    color:#4A4A4A !important;
+}
+
+.content-nav-menu ul a.active,
+.content-nav-menu ul a:hover,
+.content-nav-menu ul a.active .fill-ic-nav,
+.content-nav-menu ul a:hover .fill-ic-nav
+ {
+    color: #C4170C !important;
+    fill: #C4170C !important;
+}

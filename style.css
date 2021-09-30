@@ -1,0 +1,67 @@
+/*
+
+Theme Name: Sindical Theme
+author: Andrei Coelho
+
+*/
+
+/* header */
+
+.header-navbar {
+    position: fixed;
+    z-index: 999999;
+    background-color: white;
+}
+
+#btn-menu {
+    cursor: pointer;
+}
+
+.search-input {
+    background-position: left center;
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    padding-left: 35px;
+    border-radius: 20px;
+}
+
+#form-search-mobile {
+    position:fixed; 
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 6px;
+}
+
+#form-search-mobile .input-group {
+    width: 90%;
+    margin-left: 5%;
+}
+
+@media (min-width: 0px) { 
+
+    .header-fixed {
+        height: 50px;
+    }
+
+    .logo-header img {
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) { 
+
+    .header-fixed {
+        height: 60px;
+    }
+
+    .logo-header img {
+        height: 50px;
+    }
+
+    .logo-header {
+        width: 240px;
+    }
+}
+
