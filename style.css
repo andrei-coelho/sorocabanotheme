@@ -3,7 +3,32 @@
 Theme Name: Sindical Theme
 author: Andrei Coelho
 
+
+h1,h2,h3,h4,h5{
+    font-family: 'Fjalla One', sans-serif;
+}
 */
+
+h1,h2,h3,h4,h5{
+    font-family: 'Poppins', sans-serif;
+}
+
+span {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 2px black;
+}
+
+.img-not-simples {
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 200px;
+    background-size: 100%;
+}
+
 
 /* header */
 
@@ -39,7 +64,13 @@ author: Andrei Coelho
     margin-left: 5%;
 }
 
+
+
 @media (min-width: 0px) { 
+
+    .img-not-simples {
+        background-size: 100%;
+    }
 
     .header-fixed {
         height: 50px;
@@ -63,5 +94,100 @@ author: Andrei Coelho
     .logo-header {
         width: 240px;
     }
+
+    .img-not-simples {
+        background-size: 100%;
+    }
+
+    .right-ads {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 60;
+    }
+
+    .right-top-ads {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 60;
+    }
 }
 
+
+
+/* noticias */
+
+.noticia-principal {
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: 0.5s;
+}
+
+.not-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.not-separator {
+    position: relative;
+}
+
+@media (min-width: 0px) { 
+    .not-separator {
+        height: 30%;
+    }
+    .noticia-principal {
+        background-size: auto 100%;
+        min-height: 250px;
+    }
+}
+
+@media (min-width: 400px) { 
+    .not-separator {
+        height: 40%;
+    }
+    .noticia-principal {
+        min-height: 330px;
+    }
+}
+
+@media (min-width: 768px) { 
+
+    .not-link:hover .noticia-principal {
+        background-size: 110%;
+    }
+
+    .noticia-principal {
+        background-size: 100%;
+        min-height: 350px;
+    }
+
+    .not-separator {
+        height: 50%;
+    }
+}
+
+.categories-news {
+    border-radius: 10px;
+}
+
+/* footer */
+
+
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav li:hover a {
+    color:#FF6D63;
+}
+
+@media (min-width: 975px) { 
+    .nav li {float: left;}
+    .nav {float:right;}
+}
