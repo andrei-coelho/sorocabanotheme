@@ -160,8 +160,8 @@
                 <div class="col-4">
                     <div class="search-top" style="float:right;">
                         
-                        <form class="d-none d-md-block mt-0 mt-md-2">
-                            <input style="background-image:url('<?php bloginfo('template_url'); ?>/img/ic-search.png')"
+                        <form  method="get" action="<?php bloginfo('url') ?>" class="d-none d-md-block mt-0 mt-md-2">
+                            <input name="s" style="background-image:url('<?php bloginfo('template_url'); ?>/img/ic-search.png')"
                             class="search-input form-control border py-1" type="text" placeholder="Buscar">
                         </form>
 
@@ -171,10 +171,10 @@
                                 <img src="<?php bloginfo('template_url'); ?>/img/ic-search.png" style="height: 35px;">
                             </a>
 
-                            <form id="form-search-mobile" class="d-none">
+                            <form id="form-search-mobile" method="get" action="<?php bloginfo('url') ?>" class="d-none">
                                 <a id="close-btn-search" href="javascript:void(0)" class="closebtn fs-1">&times;</a>
                                 <div class="input-group">
-                                    <input id="input-search" style="height: 40px;"
+                                    <input id="input-search" name="s" style="height: 40px;"
                                     class="border py-1 form-control" type="text" placeholder="Palavra-chave" >
                                     <button type="submit" class="btn btn-primary">Buscar</button>
                                 </div>
