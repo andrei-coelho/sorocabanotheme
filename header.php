@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
@@ -40,7 +35,7 @@
                         
                         <hr>
                     
-                        <a href="#" class="active">
+                        <a href="<?php bloginfo('url') ?>" class="active">
                             <li class="py-1"> 
                                 <p class="fs-5 p-0 m-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -58,7 +53,7 @@
                             </li>
                         </a>
 
-                        <a href="#">
+                        <a href="<?php bloginfo('url') ?>/quem-somos">
                             <li class="py-1"> 
                                 <p class="fs-5 p-0 m-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30px" height="30px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
@@ -72,7 +67,7 @@
                             </li>
                         </a>
 
-                        <a href="#">
+                        <a href="<?php bloginfo('url') ?>/politica-de-privacidade">
                             <li class="py-1"> 
                                 <p class="fs-5 p-0 m-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -89,7 +84,7 @@
                             </li>
                         </a>
 
-                        <a href="#">
+                        <a href="<?php bloginfo('url') ?>/contato">
                             <li class="py-1"> 
                                 <p class="fs-5 p-0 m-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" 
@@ -113,21 +108,29 @@
                             Notícias
                         </h5>
                         
-                        <a href="#">
+                        <?php 
+
+                            $term = get_term_by('slug', 'noticias', 'category');
+
+                            $categories = get_categories([
+                                'child_of' => $term->term_id,
+                                'orderby' => 'name',
+                                'order'   => 'ASC'
+                            ]);
+
+                            foreach ($categories as $cat){
+                            
+                        ?>
+
+                        <a href="<?php bloginfo('url') ?>/category/noticias/<?php echo $cat->slug ?>">
                             <li> 
                                 <p class="fs-5 ps-2">
-                                    Meio ambiente
+                                    <?php echo $cat->category_nicename ?>
                                 </p> 
                             </li>
                         </a>
 
-                        <a href="#">
-                            <li> 
-                                <p class="fs-5 ps-2">
-                                    Futebol
-                                </p> 
-                            </li>
-                        </a>
+                        <?php } ?>
                         
                         
                     </ul>

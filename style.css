@@ -29,6 +29,18 @@ span {
     background-size: 100%;
 }
 
+@media (min-width: 0px) { 
+    .img-style {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) { 
+    .img-style {
+        width: 70%;
+    }
+}
+
 
 /* header */
 
