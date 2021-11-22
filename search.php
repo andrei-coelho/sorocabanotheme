@@ -27,9 +27,12 @@
     </div>
 
     <?php else: 
+
+    $api_search = $_GET['s'];
+
     $query = new WP_Query([
-        "s" => $_GET['s'],
-        "posts_per_page" => 10,
+        "s" => $api_search,
+        "posts_per_page" => 6,
         'order' => 'DESC'
     ]);
     ?> 
@@ -37,12 +40,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12 my-3">
-                <h3>Resultados da busca <b>"<?php echo $_GET['s'] ?>"</b></h3>
+                <h3>Resultados da busca <b>"<?php echo $api_search ?>"</b></h3>
             </div>
         </div>
     </div>
 
     <?php
+    $api_post_offset = 6;
     include "inc/list_noticias.php"; 
     endif; ?>
 

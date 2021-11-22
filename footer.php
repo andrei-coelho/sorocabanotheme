@@ -11,26 +11,30 @@
         <div class="col-12 col-lg-6 ">
             <ul class="nav mx-auto mt-2">
                 <li class="nav-item">
-                    <a class="nav-link px-2" href="#">home</a>
+                    <a class="nav-link px-2" href="<?php echo get_site_url(); ?>">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-2" href="#">Notícias</a>
+                    <a class="nav-link px-2" href="<?php echo get_site_url(); ?>/category/noticias/">Notícias</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-2" href="#">Quem Somos</a>
+                    <a class="nav-link px-2" href="<?php echo get_site_url(); ?>/quem-somos/">Quem Somos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-2" href="#">Política de Privacidade</a>
+                    <a class="nav-link px-2" href="<?php echo get_site_url(); ?>/politica-de-privacidade/">Política de Privacidade</a>
                 </li>
+                <!--
                 <li class="nav-item">
                     <a class="nav-link px-2" href="#">Contato</a>
                 </li>
+                -->
             </ul>
         </div>
     </div>
 
 </div>
-
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

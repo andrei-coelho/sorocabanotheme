@@ -1,5 +1,7 @@
 <?php get_header() ?>
 
+<!-- [wp_sitemap_page only="page"] -->
+
 <div class="container-fluid" style="background-color: #F2F3F5;">
 
     <div class="row justify-content-center p-0">
@@ -14,7 +16,7 @@
             </div>
         </div>
     </div>
-
+    
 </div>
 
 <div class="container">
@@ -22,29 +24,11 @@
     <div class="row justify-content-center">
         <div class="col-10">
             <p class="fs-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                culpa qui officia deserunt mollit anim id est laborum
+                Somos uma equipe multidisciplinar formada por tres jornalistas, um publicitário, dois designers, um consultor em marketing de conteúdo e dois editores de vídeo.
                 <br><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                culpa qui officia deserunt mollit anim id est laborum
+                Nossa missão é levar ao público a informação correta,de forma isenta, crítica, sempre alicerçada em valores civilizatórios,democráticos e humanistas.
                 <br><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
-                culpa qui officia deserunt mollit anim id est laborum
+                Combatemos toda forma de discriminação seja de gênero, étnica, religiosa, etária e, afirmamos nosso compromisso com a construção de uma sociedade mais justa, inclusiva e sustentável.
             </p>
         </div>
     </div>

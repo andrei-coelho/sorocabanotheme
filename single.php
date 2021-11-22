@@ -3,11 +3,12 @@
 <div class="container">
     <div class="row justify-content-center py-2">
         <div class="col-12 col-md-9">
-            <a href="#">
-                <!-- promo ads -->
-                <img class="d-block mx-auto w-100" src="<?php bloginfo('template_url') ?>/img/ads/banner3.jpg" alt="">
-
-            </a>
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-3525801060658547"
+                data-ad-slot="8306961393"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
         </div>
     </div>
 </div>
@@ -49,8 +50,12 @@
         <div class="ol-12 col-md-4">
             <div class="right-ads mt-2">
 
-                <img class="d-block mx-auto" src="<?php bloginfo('template_url') ?>/img/ads/banner2.jpg" alt="">
-
+            <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-3525801060658547"
+                    data-ad-slot="1964203883"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
             </div>
         </div>
     </div>
@@ -60,10 +65,13 @@
 <?php endwhile; ?>
 
 <?php 
+
+    $idPost = get_the_ID();
+
     $query = new WP_Query([
         'cat' => $catId,
-        'post__not_in' => [get_the_ID()],
-        "posts_per_page" => 4,
+        'post__not_in' => [$idPost],
+        "posts_per_page" => 3,
         'order' => 'DESC'
     ]);
 
@@ -78,11 +86,13 @@
         $objCat = $parent;
 
         $query = new WP_Query([
-            'post__not_in' => [get_the_ID()],
-            "posts_per_page" => 4,
+            'post__not_in' => [$idPost],
+            "posts_per_page" => 3,
             'order' => 'DESC'
         ]);
+
         $maisDe = $objCat -> name;
+    
     } else {
         $maisDe = $category;
     }
@@ -97,6 +107,13 @@
     </div>
 </div>
 
-<?php  include("inc/list_noticias.php");?>
+<?php  
+
+    $api_post_offset = $query->post_count;
+    $api_not_in = $idPost;
+    $api_category_name = $maisDe;
+    include("inc/list_noticias.php");
+
+?>
 
 <?php get_footer(); ?>
